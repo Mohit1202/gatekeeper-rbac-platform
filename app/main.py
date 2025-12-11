@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -6,10 +9,6 @@ from app.api.v1.routes import auth, user, task
 from app.db.session import engine, Base
 from app.core.config import settings
 from app.core.logging_config import logger
-
-
-
-
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
