@@ -31,8 +31,7 @@
 - **Database**: PostgreSQL  
 - **ORM**: SQLAlchemy (sync)  
 - **Authentication**: JWT + OAuth2 Password Bearer  
-- **Password Hashing**: Bcrypt via Passlib  
-- **Background Tasks**: `asyncio`  
+- **Password Hashing**: Bcrypt via Passlib   
 - **CORS**: FastAPI CORS middleware (allow all origins)  
 
 ---
