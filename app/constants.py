@@ -6,3 +6,9 @@ class TaskStatus(str, Enum):
     running = "running"
     completed = "completed"
     failed = "failed"
+
+class Role(str, Enum):
+    admin = "admin"
+    manager = "manager"
+    operator = "operator"
+    viewer = "viewer"

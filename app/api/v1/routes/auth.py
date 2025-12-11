@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 
+from app.constants import Role
 from app.db.models.user import User
 from app.db.session import get_db
 from app.core.security import (
@@ -35,7 +36,7 @@ def init_admin(db: Session = Depends(get_db)):
     admin = User(
         username="admin",
         password_hash=create_password_hash("admin123"),
-        role="admin",
+        role=Role.admin,
         created_at=datetime.datetime.utcnow(),
     )
     db.add(admin)
